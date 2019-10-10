@@ -1,0 +1,31 @@
+Summarize the changes in 50 characters or less
+
+A summary line should be written in the imperative mood.  This style
+will define the commit as an action that was applied to the code.
+It also matches the style of commit messages that are generated
+automatically by, for example, the "git revert" command.  Do NOT
+terminate your summary line with a period.  Always capitalize the
+first character in your summary line.
+
+A more detailed explanation may follow the summary line, if
+necessary.  Wrap the message text at 68 characters.  Note that the
+blank line separating the summary line from the message body is
+required (unless the message body is omitted entirely).  Fully
+explain the "why" of this change.  Is there anything special that
+readers should note?  Say it right now!
+
+Paragraphs are separated, of course, by single blank lines.
+
+  - Bulleted lists are okay, too.
+  - Typically, a hyphen or an asterisk is the bullet, followed by
+    a single space.
+  - Use hanging indentation, as in the above point.
+  - The list as a whole is indented by two spaces.
+  - Numbered lists are formatted in the same manner.
+
+After you have finished explaining "what" and "why" and establishing
+the context for your commit, you may end by listing the ID numbers
+of tickets or issues that this commit resolves or references.
+
+Resolves: #123
+See also: #456, #789
