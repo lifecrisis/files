@@ -1,0 +1,25 @@
+diff --git a/runtime/syntax/php.vim b/runtime/syntax/php.vim
+index b10b0c676..d4a9ad1e6 100644
+--- a/runtime/syntax/php.vim
++++ b/runtime/syntax/php.vim
+@@ -327,11 +327,16 @@ syn keyword phpDefine new clone contained
+ syn keyword phpBoolean true false contained
+ 
+ " Number
+-syn match phpNumber "-\=\<\d\+\>" contained display
+-syn match phpNumber "\<0x\x\{1,8}\>" contained display
++" Refer to: https://www.php.net/manual/en/language.types.integer.php
++syn match phpNumber "\<\%([1-9]\d*\|0\)\>" contained display
++syn match phpNumber "\<0[xX]\x\+\>" contained display
++syn match phpNumber "\<0\o\+\>" contained display
++syn match phpNumber "\<0[bB][01]\+\>" contained display
+ 
+ " Float
+-syn match phpFloat "\(-\=\<\d+\|-\=\)\.\d\+\>" contained display
++" Refer to: https://www.php.net/manual/en/language.types.float.php
++syn match phpFloat "\%(\d*\.\d\+\|\d\+\.\d*\)\%([eE][+-]\=\d\+\)\=" contained display
++syn match phpFloat "\<\d\+[eE][+-]\=\d\+\>" contained display
+ 
+ " Backslash escapes
+ 	syn case match
+
